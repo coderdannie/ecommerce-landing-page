@@ -1,0 +1,154 @@
+@use '../utils/' as u;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ul {
+  list-style-type: none;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+.noscroll {
+  overflow-y: hidden;
+}
+p {
+  line-height: 1.5;
+}
+body {
+  font-family: u.$ff-body;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+//flexbox styles
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-grow {
+    flex: 2;
+  }
+}
+.hide-for-mobile {
+  //hide for tablet and mobile devices
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide for desktop viewport widths
+  @include u.breakpoint-up(large) {
+    display: none;
+  }
+}
+.show-for-tablet-and-desktop {
+  @include u.breakpoint-up(medium) {
+    display: none;
+  }
+}
+.show-for-mobile {
+  @include u.breakpoint-down(small) {
+    display: none;
+  }
+}
+.wrapper {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+//utils classes
+.secondary-heading {
+  @include u.breakpoint-up(large) {
+    font-size: u.$fs-700;
+  }
+  font-size: u.$fs-primary-heading;
+}
+.fs-200 {
+  font-size: u.$fs-200;
+}
+.fs-600 {
+  font-size: u.$fs-600;
+}
+.text-accent-100 {
+  color: u.$clr-accent-100;
+}
+.text-neutral-400 {
+  color: u.$clr-neutral-400;
+}
+.text-neutral-300 {
+  color: u.$clr-neutral-200;
+}
+.text-neutal-400 {
+  color: u.$clr-neutral-300;
+}
+.fw-regular {
+  font-weight: u.$fw-regular;
+}
+.fw-bold {
+  font-weight: u.$fw-bold;
+}
+.fs-btn {
+  @include u.breakpoint-up(large) {
+    font-size: u.$fs-500;
+  }
+  font-size: u.$fs-btn;
+}
+.btn {
+  width: 100%;
+  background-color: u.$clr-primary-100;
+
+  padding-block: u.rem(16);
+  border: none;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: hsla(26, 100%, 55%, 0.7);
+  }
+}
+.display {
+  display: none;
+}
+.visibility {
+  visibility: hidden;
+}

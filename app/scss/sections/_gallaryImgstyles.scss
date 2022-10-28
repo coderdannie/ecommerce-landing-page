@@ -1,0 +1,55 @@
+@use '../utils/' as u;
+.img-window {
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  /* opacity: 0.1; */
+}
+.img-window img {
+  max-width: 50vw;
+  max-height: 50vh;
+}
+#carousel-dots-js {
+  display: none;
+}
+.active {
+  visibility: hidden;
+}
+.img {
+  border-radius: 16px;
+}
+
+.gallery-btn {
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+  width: u.rem(40);
+  height: u.rem(40);
+  position: fixed;
+  top: 48vh;
+  display: grid;
+  place-content: center;
+  background: u.$clr-neutral-400;
+  border-radius: 50%;
+  z-index: 1000;
+  border: none;
+  cursor: pointer;
+}
+.close__btn {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 20vh;
+  z-index: 2000;
+  cursor: pointer;
+}

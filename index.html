@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eCommerce-Landing-page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+  </head>
+  <body>
+    <header class="header wrapper">
+      <div class="header__container flex flex-jc-sb">
+        <div class="right-col flex flex-jc-c flex-ai-c">
+          <div id="toggleBar" class="header__toggle hide-for-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="overlay hide-for-desktop"></div>
+          <div class="header__toggle-nav hide-for-desktop">
+            <div id="close-bar" class="header__closeToggle">
+              <img src="images/icon-close.svg" alt="icon-close">
+            </div>
+            <div id="navlinks-container" class="header__togglelinks-container">
+            <a href="#" class="header__toggle-links">Collections</a>
+            <a href="#" class="header__toggle-links">Men</a>
+            <a href="#" class="header__toggle-links">Women</a>
+            <a href="#" class="header__toggle-links">About</a>
+            <a href="#" class="header__toggle-links">Contact</a>
+          </div>
+          </div>
+          <div class="logo">
+            <a href="#">
+              <img src="images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <nav class="nav hide-for-mobile">
+            <ul role="list primary-list">
+              <li class="nav__list"><a href="#"> Collections </a></li>
+              <li class="nav__list"><a href="#"> Men </a></li>
+              <li class="nav__list"><a href="#"> Women </a></li>
+              <li class="nav__list"><a href="#"> About </a></li>
+              <li class="nav__list"><a href="#"> Contact </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="left-col flex flex-ai-c">
+          <a id="cartimgbtn" class="header__cart-img" href="#">
+            <img src="images/icon-cart.svg" alt="icon-cart" />
+            <span id="cartCounts" class="header__cart-counts fs-200 text-neutral-400 visibility">0</span>
+          </a>
+          <div class="header__cart-container display">
+            <p class="text-accent-100 fw-bold header__cart-tag">Cart</p>
+            <div class="header__cart-summary">
+              <div class="header__cart-inner">
+                <div id="cart-content" class="cart__content display">
+                  <div class="flex flex-ai-c ">
+                    <div class="header__cart-img"> 
+                      <img src="images/image-product-1-thumbnail.jpg" data-src="images/image-product-1.jpg" alt="image-product-1-thumbnail">
+                  </div>
+                  <div class="header__cart-price">
+                    <p class="fw-regular ">Autumn Limited Edition...</p>
+                    $125.00 x <span class="cart__number">0</span>
+                    <span class="header__cart-cal-total-price text-accent-100 fw-bold" id="totalPrice">0</span>
+                
+                  </div>
+                  <div class="header__cart-delete" id="deleteBtn">
+                    <img src="images/icon-delete.svg" alt="">
+                  </div>
+                </div>
+                <button id="checkoutBtn" class="btn header__checkout-btn text-neutral-400 fs-btn fw-bold">
+                  Checkout
+                </button>
+                </div>
+              </div>
+              <p class="header__cart-empty  fw-bold text-neutral-300">
+                Your cart is empty
+              </p>
+          </div>
+        </div>
+         <a class="header__pic" href="#">
+
+           <img src="images/image-avatar.png" alt="" />
+         </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__wrapper">
+        <div class="carousel flex flex-ai-c">
+          <ul class="carousel__track">
+            <li class="carousel__slide">
+              <img src="images/image-product-1.jpg" alt="">
+            </li>
+            <li class="carousel__slide">
+              <img src="images/image-product-2.jpg" alt="">
+            </li>
+            <li class="carousel__slide">
+              <img src="images/image-product-3.jpg" alt="">
+            </li>
+            <li class="carousel__slide">
+              <img src="images/image-product-4.jpg" alt="">
+            </li>
+            <button id="prev-btn" class="carousel__btn carousel__btn--prev">
+              <img src="images/icon-previous.svg" alt="icon-previous">
+            </button>
+            <button id="next-btn" class="carousel__btn carousel__btn--next">
+              <img src="images/icon-next.svg" alt="">
+            </button>
+            <div class="carousel__dots ">
+              <button id="slide_btn">
+                <img  src="images/image-product-1-thumbnail.jpg"   data-src ="images/image-product-1.jpg" alt="image-product-1-thumbnail">
+              </button>
+              <button id="slide_btn">
+                <img  src="images/image-product-2-thumbnail.jpg" data-src ="images/image-product-2.jpg" alt="image-product-2-thumbnail">
+              </button>
+              <button id="slide_btn">
+                <img  src="images/image-product-3-thumbnail.jpg" data-src ="images/image-product-3.jpg" alt="image-product-3-thumbnail">
+              </button>
+              <button id="slide_btn"><img  src="images/image-product-4-thumbnail.jpg" data-src ="images/image-product-4.jpg"  alt="image-product-4-thumbnail"></button>
+            </div>
+            <div class="carousel-dots-js active carousel__dots" >
+              <button id="slide_btn">
+                <img  src="images/image-product-1-thumbnail.jpg"   data-src ="images/image-product-1.jpg" alt="image-product-1-thumbnail">
+              </button>
+              <button id="slide_btn">
+                <img  src="images/image-product-2-thumbnail.jpg" data-src ="images/image-product-2.jpg" alt="image-product-2-thumbnail">
+              </button>
+              <button id="slide_btn">
+                <img  src="images/image-product-3-thumbnail.jpg" data-src ="images/image-product-3.jpg" alt="image-product-3-thumbnail">
+              </button>
+              <button id="slide_btn"><img  src="images/image-product-4-thumbnail.jpg" data-src ="images/image-product-4.jpg"  alt="image-product-4-thumbnail"></button>
+            </div>
+          </ul>
+        </div>
+        <div class="wrapper flex flex-ai-c flex-grow">
+          <div class="main__content-container">
+            <div class="main__content">
+              <h2>Sneaker company</h2>
+              <h1 class="secondary-heading">Fall Limited Edition Sneakers</h1>
+              <p class="text-neutral-300">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            </div>
+            <div class="cart">
+              <div class="flex flex-jc-sb flex-ai-c cart--container">
+                <div class="cart__price flex">
+                  <p class="cart__fixed-price fs-600  fw-bold">$125.00</p>
+                  <span class="cart__discount  fw-bold">50%</span>
+                </div>
+                <p class="fw-bold cart__pre-price text-neutal-400">$250.00</p>
+              
+              </div>
+              <div class="cart__order">
+                <div class="cart__cta flex flex-jc-sb">
+                  <button class="minusbtn"><img src="images/icon-minus.svg" alt="icon-minus"></button>
+                   <span class="cart__order-num">0</span>
+                   <button class="plusbtn">
+                     <img src="images/icon-plus.svg" alt="">
+                   </button>
+  
+                </div>
+             <button id="addtocartBtn" class="cart__add-cartBtn btn flex flex-jc-c"> <div><img src="images/icon-cart2.svg" alt="icon-cart"></div>
+              <p class="text-neutral-400 fs-btn fw-bold">Add to cart</p>
+             </button>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </main>
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque? -->
+    <script type="module" src="/main.js"></script>
+  </body>
+  <!--  Sneaker Company Fall   $125.00 50% $250.00 0 Add to cart -->
+</html>

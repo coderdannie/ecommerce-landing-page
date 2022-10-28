@@ -1,0 +1,36 @@
+@use 'mixins' as m;
+@use 'function' as f;
+
+//Primary
+$clr-primary-100: hsl(26, 100%, 55%);
+$clr-primary-400: hsl(25, 100%, 94%);
+
+//Neutral
+$clr-neutral-100: hsl(220, 13%, 13%);
+$clr-neutral-200: hsl(219, 9%, 45%);
+$clr-neutral-300: hsl(220, 14%, 75%);
+$clr-neutral-400: hsl(0, 0%, 100%);
+$clr-accent-100: hsl(0, 0%, 0%);
+$clr-acccent-400: hsl(223, 64%, 98%);
+
+$ff-primary: 'Kumbh Sans', sans-serif;
+$ff-body: $ff-primary;
+//Font sizes
+$fs-200: f.rem(14);
+$fs-300: f.rem(16);
+$fs-500: f.rem(18);
+$fs-600: f.rem(22);
+$fs-700: f.rem(36);
+
+$fs-body: $fs-300;
+$fs-nav: $fs-300;
+$fs-primary-heading: $fs-600;
+$fs-btn: $fs-200;
+$fs-tag: $fs-200;
+@include m.breakpoint-up(large) {
+  $fs-btn: $fs-500;
+}
+
+//Font weight
+$fw-regular: 400;
+$fw-bold: 700;
