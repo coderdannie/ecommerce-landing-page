@@ -47,6 +47,9 @@ p {
 }
 body {
   font-family: u.$ff-body;
+  &.noscroll {
+    overflow-y: hidden;
+  }
 }
 a,
 a:visited,

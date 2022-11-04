@@ -4,14 +4,17 @@ const toggleBar = document.querySelector('#toggleBar');
 const closeBar = document.querySelector('#close-bar');
 const navLinksContainer = document.querySelector('.header__toggle-nav');
 const overlay = document.querySelector('.overlay');
-
+const body = document.body;
+console.log(body);
 toggleBar.addEventListener('click', () => {
   navLinksContainer.style.left = 0;
   overlay.style.display = 'block';
+  body.classList.add('noscroll');
 });
 closeBar.addEventListener('click', function () {
   navLinksContainer.style.left = -1000 + 'px';
   overlay.style.display = 'none';
+  body.classList.remove('noscroll');
   console.log(this);
 });
 //carousel
