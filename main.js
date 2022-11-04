@@ -1,11 +1,10 @@
-console.log('Hello world');
 //hamburger menu
 const toggleBar = document.querySelector('#toggleBar');
 const closeBar = document.querySelector('#close-bar');
 const navLinksContainer = document.querySelector('.header__toggle-nav');
 const overlay = document.querySelector('.overlay');
 const body = document.body;
-console.log(body);
+
 toggleBar.addEventListener('click', () => {
   navLinksContainer.style.left = 0;
   overlay.style.display = 'block';
@@ -64,7 +63,7 @@ if (img) {
       let newImgWindow = document.createElement('div');
       container.appendChild(newImgWindow);
       newImgWindow.setAttribute('class', 'img-window');
-      //   newImgWindow.addEventListener('click', closeImg);
+
       let newImg = document.createElement('img');
       newImg.setAttribute('class', 'img');
       newImgWindow.appendChild(newImg);
