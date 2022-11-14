@@ -198,8 +198,3 @@ deleteBtn.addEventListener('click', () => {
 cartImgBtn.addEventListener('click', () => {
   cartContainer.classList.toggle('display');
 });
-// checkoutBtn.addEventListener('click', () => {
-//   cardEmptyMessage.classList.remove('display');
-//   cartContentContainer.classList.add('display');
-//   cartCountIndex.classList.add('visibility');
-// });
